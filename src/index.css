@@ -1,0 +1,6 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* small body padding fallback */
+body { @apply bg-gray-50; }
