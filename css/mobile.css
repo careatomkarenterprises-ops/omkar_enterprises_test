@@ -1,0 +1,24 @@
+/* ===========================================
+   MOBILE OPTIMIZATION STYLES
+   =========================================== */
+@media (max-width: 768px) {
+    .nav-menu {
+        display: none; /* Hidden on mobile, toggled by JS */
+        flex-direction: column;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background: var(--primary-blue);
+        padding: 20px;
+    }
+
+    .nav-menu.active { display: flex; }
+
+    .hamburger {
+        display: block;
+        cursor: pointer;
+    }
+
+    .hero h1 { font-size: 2rem; }
+}
