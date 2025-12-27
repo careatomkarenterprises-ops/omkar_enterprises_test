@@ -1,105 +1,61 @@
-/* ===========================================
-   OMKAR ENTERPRISES - INSTITUTIONAL MASTER CSS
-   =========================================== */
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Playfair+Display:wght@700&display=swap');
-
+/* PREMIUM BRANDING & LAYOUT */
 :root {
-    --navy: #00152E;
+    --navy: #000B18;
+    --navy-light: #00152E;
     --gold: #D4AF37;
+    --gold-bright: #F1D592;
     --white: #FFFFFF;
-    --glass: rgba(255, 255, 255, 0.95);
-    --shadow: 0 10px 30px rgba(0,0,0,0.1);
+    --text-muted: #A0AEC0;
 }
 
-* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: 'Inter', sans-serif; background: #fdfdfd; color: var(--navy); overflow-x: hidden; }
 
-body {
-    font-family: 'Inter', sans-serif;
-    background-color: #f8fafc;
-    color: var(--navy);
-    line-height: 1.6;
-    overflow-x: hidden;
-}
+.container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
 
-/* MOBILE RESPONSIVE NAVIGATION */
-.navbar {
-    background: var(--navy);
-    padding: 1rem 5%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-    border-bottom: 3px solid var(--gold);
-}
-
-.logo {
-    color: white;
-    font-family: 'Playfair Display', serif;
-    font-size: 1.4rem;
-    text-decoration: none;
-    font-weight: 700;
-}
-
-.nav-menu { display: flex; list-style: none; gap: 20px; }
-.nav-menu a { color: white; text-decoration: none; font-size: 0.9rem; font-weight: 600; }
-
-/* HERO SECTION - THE "INSTITUTIONAL" LOOK */
-.hero {
-    background: linear-gradient(rgba(0, 21, 46, 0.8), rgba(0, 21, 46, 0.8)), 
-                url('https://images.unsplash.com/photo-1454165833767-027ffea9e77b?q=80&w=2070&auto=format&fit=crop');
-    background-size: cover;
-    background-position: center;
-    padding: 120px 5%;
-    text-align: center;
-    color: white;
-}
-
-.hero h1 {
-    font-family: 'Playfair Display', serif;
-    font-size: clamp(2rem, 5vw, 3.5rem); /* Responsive Font */
-    margin-bottom: 20px;
-}
-
+/* NAVBAR LUXE */
+.navbar { background: var(--navy); padding: 20px 0; border-bottom: 1px solid rgba(212,175,55,0.3); position: sticky; top:0; z-index: 1000; }
+.nav-flex { display: flex; justify-content: space-between; align-items: center; }
+.logo { font-family: 'Playfair Display', serif; color: white; font-size: 1.5rem; text-decoration: none; font-weight: 900; }
 .text-gold { color: var(--gold); }
+.nav-menu { display: flex; list-style: none; gap: 30px; align-items: center; }
+.nav-menu a { color: white; text-decoration: none; font-weight: 500; transition: 0.3s; font-size: 0.9rem; }
+.nav-menu a:hover { color: var(--gold); }
+.login-pill { background: rgba(212,175,55,0.1); border: 1px solid var(--gold); padding: 8px 20px; border-radius: 50px; color: var(--gold) !important; }
 
-/* MOBILE FIX: GRID SYSTEM */
-.container { width: 90%; max-width: 1200px; margin: 0 auto; }
-
-.grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 30px;
-    padding: 60px 0;
+/* HERO LUXE */
+.hero { 
+    background: radial-gradient(circle at center, rgba(0,21,46,0.85) 0%, var(--navy) 100%), 
+                url('https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=2070&auto=format&fit=crop');
+    background-size: cover; background-position: center;
+    padding: 150px 0; text-align: center; color: white;
 }
+.hero-badge { background: rgba(212,175,55,0.2); color: var(--gold); display: inline-block; padding: 5px 15px; border-radius: 50px; font-size: 0.7rem; font-weight: 700; letter-spacing: 2px; margin-bottom: 20px; border: 1px solid var(--gold); }
+.hero h1 { font-family: 'Playfair Display', serif; font-size: 3.5rem; line-height: 1.1; margin-bottom: 25px; }
+.hero-subtext { font-size: 1.2rem; color: var(--text-muted); max-width: 700px; margin: 0 auto 40px; }
 
-.card {
-    background: white;
-    padding: 40px;
-    border-radius: 12px;
-    box-shadow: var(--shadow);
-    border-top: 5px solid var(--gold);
-    transition: 0.3s transform ease;
-}
+/* STATS BAR */
+.stats-bar { background: var(--navy-light); padding: 40px 0; color: white; margin-top: -50px; border-radius: 10px; box-shadow: 0 20px 40px rgba(0,0,0,0.3); position: relative; z-index: 5; }
+.grid-4 { display: grid; grid-template-columns: repeat(4, 1fr); text-align: center; }
+.stat-item h2 { font-size: 2.5rem; color: var(--gold); margin-bottom: 5px; }
+.stat-item p { font-size: 0.8rem; color: var(--text-muted); text-transform: uppercase; letter-spacing: 1px; }
 
-.card:hover { transform: translateY(-10px); }
+/* FEATURE CARDS */
+.grid-3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 30px; padding-bottom: 80px; }
+.feature-card { background: white; padding: 50px 30px; border-radius: 15px; box-shadow: 0 10px 30px rgba(0,0,0,0.05); text-align: center; transition: 0.4s; border: 1px solid #eee; }
+.feature-card:hover { transform: translateY(-10px); border-color: var(--gold); }
+.icon-box { font-size: 2.5rem; color: var(--gold); margin-bottom: 20px; }
+.feature-card h3 { margin-bottom: 15px; font-family: 'Playfair Display', serif; }
+.feature-card p { color: #666; font-size: 0.95rem; }
 
 /* BUTTONS */
-.btn-gold {
-    background: var(--gold);
-    color: var(--navy) !important;
-    padding: 15px 35px;
-    border-radius: 5px;
-    text-decoration: none;
-    font-weight: 700;
-    display: inline-block;
-    box-shadow: 0 4px 15px rgba(212, 175, 55, 0.3);
-}
+.btn-gold-main { background: var(--gold); color: var(--navy); padding: 18px 40px; border-radius: 5px; text-decoration: none; font-weight: 700; display: inline-block; transition: 0.3s; }
+.btn-gold-main:hover { background: var(--gold-bright); transform: scale(1.05); }
+.btn-outline { border: 1px solid var(--gold); color: var(--gold); padding: 18px 40px; border-radius: 5px; text-decoration: none; font-weight: 700; display: inline-block; margin-left: 15px; }
 
-/* MOBILE QUERY */
+/* MOBILE RESPONSIVE */
 @media (max-width: 768px) {
-    .nav-menu { display: none; } /* Standard Mobile Menu Hide */
-    .hero { padding: 80px 5%; }
-    .grid { grid-template-columns: 1fr; }
+    .grid-4, .grid-3 { grid-template-columns: 1fr; gap: 20px; }
+    .hero h1 { font-size: 2.2rem; }
+    .nav-menu { display: none; }
+    .stats-bar { margin-top: 20px; }
 }
