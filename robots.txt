@@ -1,4 +1,6 @@
 User-agent: *
 Allow: /
 Disallow: /investor-dashboard.html
-Sitemap: https://yourdomain.com/sitemap.xml
+Disallow: /js/sheetdb-auth.js
+
+Sitemap: https://omkarenterprises.in/sitemap.xml
