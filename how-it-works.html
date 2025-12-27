@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Process | How It Works | Omkar Enterprises</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .step-container { position: relative; max-width: 800px; margin: 50px auto; padding: 20px; }
+        .step-item { display: flex; gap: 30px; margin-bottom: 50px; position: relative; }
+        .step-number { 
+            background: var(--gold); color: var(--navy); width: 50px; height: 50px; 
+            border-radius: 50%; display: flex; align-items: center; justify-content: center; 
+            font-weight: 800; font-size: 1.2rem; flex-shrink: 0; z-index: 2;
+        }
+        .step-item::after { 
+            content: ''; position: absolute; left: 24px; top: 50px; 
+            width: 2px; height: calc(100% + 10px); background: #cbd5e0; z-index: 1; 
+        }
+        .step-item:last-child::after { display: none; }
+        .step-content { background: white; padding: 25px; border-radius: 12px; box-shadow: var(--shadow); width: 100%; }
+    </style>
+</head>
+<body>
+    <section class="hero" style="padding: 80px 0;">
+        <div class="container">
+            <h1 style="font-family: 'Playfair Display';">Our Onboarding <span class="text-gold">Protocol</span></h1>
+            <p>A transparent 4-step journey to securing your monthly payouts.</p>
+        </div>
+    </section>
+
+    <div class="container">
+        <div class="step-container">
+            <div class="step-item">
+                <div class="step-number">1</div>
+                <div class="step-content">
+                    <h3>Consultation & KYC</h3>
+                    <p>Initial meeting to understand your goals. We collect basic KYC documents (Aadhar, PAN) to verify eligibility.</p>
+                </div>
+            </div>
+            <div class="step-item">
+                <div class="step-number">2</div>
+                <div class="step-content">
+                    <h3>Legal Execution</h3>
+                    <p>Preparation of the Loan Agreement on appropriate stamp paper. Documentation is notarized for legal validity.</p>
+                </div>
+            </div>
+            <div class="step-item">
+                <div class="step-number">3</div>
+                <div class="step-content">
+                    <h3>Security Issuance</h3>
+                    <p>Omkar Enterprises issues Post-Dated Cheques (PDCs) and the original notarized copy to the partner.</p>
+                </div>
+            </div>
+            <div class="step-item">
+                <div class="step-number">4</div>
+                <div class="step-content">
+                    <h3>Monthly Payouts</h3>
+                    <p>Capital deployment begins. You receive 2.5% payouts directly to your bank account every 30 days.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
