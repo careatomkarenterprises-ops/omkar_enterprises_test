@@ -1,76 +1,105 @@
 /* ===========================================
-   OMKAR ENTERPRISES - INSTITUTIONAL STYLE
+   OMKAR ENTERPRISES - INSTITUTIONAL MASTER CSS
    =========================================== */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Playfair+Display:wght@700&display=swap');
+
 :root {
-    --primary-blue: #001F3F;
-    --dark-blue: #00152E;
+    --navy: #00152E;
     --gold: #D4AF37;
-    --light-gold: #E6C158;
     --white: #FFFFFF;
-    --light-gray: #F4F7F9;
+    --glass: rgba(255, 255, 255, 0.95);
+    --shadow: 0 10px 30px rgba(0,0,0,0.1);
 }
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
 
 body {
     font-family: 'Inter', sans-serif;
-    color: #333;
-    line-height: 1.7;
-    background-color: var(--white);
+    background-color: #f8fafc;
+    color: var(--navy);
+    line-height: 1.6;
+    overflow-x: hidden;
 }
 
-/* NAVIGATION */
+/* MOBILE RESPONSIVE NAVIGATION */
 .navbar {
-    background: var(--primary-blue);
-    padding: 1.2rem 0;
+    background: var(--navy);
+    padding: 1rem 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
     border-bottom: 3px solid var(--gold);
 }
 
-.container { max-width: 1200px; margin: 0 auto; padding: 0 20px; display: flex; justify-content: space-between; align-items: center; }
-
-.logo { color: white; font-weight: 800; font-size: 1.6rem; text-decoration: none; letter-spacing: 1px; }
-
-.nav-menu { display: flex; list-style: none; gap: 30px; }
-
-.nav-menu a { color: white; text-decoration: none; font-weight: 500; font-size: 0.95rem; }
-
-/* HERO SECTION */
-.hero {
-    background: linear-gradient(rgba(0,31,63,0.85), rgba(0,21,46,0.95)), url('https://images.unsplash.com/photo-1560520653-9e0e4c89eb11?auto=format&fit=crop&w=1920');
-    background-size: cover;
-    background-position: center;
+.logo {
     color: white;
-    padding: 140px 0;
-    text-align: center;
+    font-family: 'Playfair Display', serif;
+    font-size: 1.4rem;
+    text-decoration: none;
+    font-weight: 700;
 }
 
-.hero h1 { font-size: 3.5rem; margin-bottom: 20px; font-family: 'Playfair Display', serif; }
+.nav-menu { display: flex; list-style: none; gap: 20px; }
+.nav-menu a { color: white; text-decoration: none; font-size: 0.9rem; font-weight: 600; }
+
+/* HERO SECTION - THE "INSTITUTIONAL" LOOK */
+.hero {
+    background: linear-gradient(rgba(0, 21, 46, 0.8), rgba(0, 21, 46, 0.8)), 
+                url('https://images.unsplash.com/photo-1454165833767-027ffea9e77b?q=80&w=2070&auto=format&fit=crop');
+    background-size: cover;
+    background-position: center;
+    padding: 120px 5%;
+    text-align: center;
+    color: white;
+}
+
+.hero h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(2rem, 5vw, 3.5rem); /* Responsive Font */
+    margin-bottom: 20px;
+}
 
 .text-gold { color: var(--gold); }
 
-/* CONTENT BLOCKS (This makes it look professional) */
-.section { padding: 80px 0; }
+/* MOBILE FIX: GRID SYSTEM */
+.container { width: 90%; max-width: 1200px; margin: 0 auto; }
 
-.section-title { text-align: center; margin-bottom: 50px; }
-
-.section-title h2 { font-size: 2.5rem; color: var(--primary-blue); }
-
-.section-title .underline { width: 80px; height: 4px; background: var(--gold); margin: 15px auto; }
-
-/* SERVICE CARDS */
-.grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; }
-
-.card {
-    background: var(--light-gray);
-    padding: 40px;
-    border-radius: 8px;
-    border-bottom: 4px solid transparent;
-    transition: 0.3s;
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    padding: 60px 0;
 }
 
-.card:hover { border-bottom: 4px solid var(--gold); transform: translateY(-10px); background: white; box-shadow: 0 20px 40px rgba(0,0,0,0.1); }
+.card {
+    background: white;
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: var(--shadow);
+    border-top: 5px solid var(--gold);
+    transition: 0.3s transform ease;
+}
+
+.card:hover { transform: translateY(-10px); }
 
 /* BUTTONS */
-.btn-gold { background: var(--gold); color: var(--primary-blue) !important; padding: 12px 30px; border-radius: 4px; font-weight: 700; }
+.btn-gold {
+    background: var(--gold);
+    color: var(--navy) !important;
+    padding: 15px 35px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: 700;
+    display: inline-block;
+    box-shadow: 0 4px 15px rgba(212, 175, 55, 0.3);
+}
 
-.btn-main { background: var(--gold); color: var(--primary-blue); padding: 15px 40px; text-decoration: none; border-radius: 5px; font-weight: bold; margin: 10px; display: inline-block; }
-
-.btn-sub { border: 2px solid white; color: white; padding: 15px 40px; text-decoration: none; border-radius: 5px; font-weight: bold; margin: 10px; display: inline-block; }
+/* MOBILE QUERY */
+@media (max-width: 768px) {
+    .nav-menu { display: none; } /* Standard Mobile Menu Hide */
+    .hero { padding: 80px 5%; }
+    .grid { grid-template-columns: 1fr; }
+}
