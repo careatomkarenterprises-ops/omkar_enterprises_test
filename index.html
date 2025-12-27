@@ -3,57 +3,98 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Omkar Enterprises | Secured Private Lending</title>
-    <link rel="stylesheet" href="css/style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <title>Investor Console | Omkar Enterprises</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --sidebar-bg: #00152E;
+            --accent-gold: #D4AF37;
+            --body-bg: #F0F2F5;
+            --card-shadow: 0 4px 20px rgba(0,0,0,0.08);
+        }
+        body { font-family: 'Inter', sans-serif; background: var(--body-bg); margin: 0; display: flex; }
+        
+        /* Institutional Sidebar */
+        .sidebar { width: 260px; height: 100vh; background: var(--sidebar-bg); color: white; position: fixed; padding: 30px 20px; }
+        .sidebar .logo { font-size: 1.2rem; font-weight: 800; border-bottom: 1px solid #1a365d; padding-bottom: 20px; margin-bottom: 30px; }
+        .sidebar-link { padding: 15px; display: block; color: #a0aec0; text-decoration: none; border-radius: 8px; margin-bottom: 5px; }
+        .sidebar-link.active { background: #1a365d; color: white; border-left: 4px solid var(--accent-gold); }
+
+        /* Main Content */
+        .main-content { margin-left: 260px; width: calc(100% - 260px); padding: 40px; }
+        .header-bar { display: flex; justify-content: space-between; align-items: center; margin-bottom: 40px; }
+        
+        /* Stats Grid */
+        .stats-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 25px; margin-bottom: 40px; }
+        .stat-card { background: white; padding: 25px; border-radius: 12px; box-shadow: var(--card-shadow); border-top: 4px solid var(--accent-gold); }
+        .stat-card h3 { color: #718096; font-size: 0.85rem; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 10px; }
+        .stat-card .value { font-size: 1.8rem; font-weight: 700; color: var(--sidebar-bg); }
+
+        /* Chart Area */
+        .chart-container { background: white; padding: 30px; border-radius: 12px; box-shadow: var(--card-shadow); height: 350px; }
+    </style>
 </head>
 <body>
-    <nav class="navbar">
-        <div class="container">
-            <a href="index.html" class="logo">OMKAR <span class="text-gold">ENTERPRISES</span></a>
-            <ul class="nav-menu">
-                <li><a href="about.html">About</a></li>
-                <li><a href="legal-framework.html">Legal Security</a></li>
-                <li><a href="investment-tiers.html">Tiers</a></li>
-                <li><a href="contact.html" class="btn-gold">Get Started</a></li>
-            </ul>
-        </div>
-    </nav>
+    <div class="sidebar">
+        <div class="logo">OMKAR <span style="color:var(--accent-gold)">ENTERPRISES</span></div>
+        <a href="#" class="sidebar-link active"><i class="fas fa-home"></i> &nbsp; Portfolio Overview</a>
+        <a href="#" class="sidebar-link"><i class="fas fa-history"></i> &nbsp; Payout History</a>
+        <a href="#" class="sidebar-link"><i class="fas fa-file-invoice"></i> &nbsp; Legal Documents</a>
+        <a href="index.html" class="sidebar-link" style="margin-top:50px; color:#fc8181;"><i class="fas fa-sign-out-alt"></i> &nbsp; Secure Logout</a>
+    </div>
 
-    <header class="hero">
-        <div class="container" style="display:block;">
-            <h1>Structured Private Lending with <br><span class="text-gold">Contractual Certainty</span></h1>
-            <p style="font-size: 1.2rem; max-width: 800px; margin: 0 auto 30px;">Experience 2.5% monthly payouts through our institutional-grade financial framework. <br>Secure, Transparent, and Notarized.</p>
-            <div class="hero-btns">
-                <a href="contact.html" class="btn-main">Request Consultation</a>
-                <a href="how-it-works.html" class="btn-sub">View Our Process</a>
+    <div class="main-content">
+        <div class="header-bar">
+            <div>
+                <h1 style="margin:0; color:#2d3748;">Investor Dashboard</h1>
+                <p style="color:#718096;">Welcome back, <span id="user-name-display">Investor</span></p>
+            </div>
+            <div style="text-align:right">
+                <span style="background:#e2e8f0; padding:8px 15px; border-radius:20px; font-size:0.8rem; font-weight:bold;">KYC VERIFIED</span>
             </div>
         </div>
-    </header>
 
-    <section class="section">
-        <div class="container" style="display:block;">
-            <div class="section-title">
-                <h2>Why Invest With Us?</h2>
-                <div class="underline"></div>
+        <div class="stats-grid">
+            <div class="stat-card">
+                <h3>Principal Capital</h3>
+                <div class="value" id="principal-val">₹0.00</div>
             </div>
-            <div class="grid">
-                <div class="card">
-                    <h3>Legal Security</h3>
-                    <p>Every partnership is governed by the Indian Contract Act with notarized agreements and PDC security.</p>
-                </div>
-                <div class="card">
-                    <h3>Fixed Returns</h3>
-                    <p>Enjoy consistent 2.5% monthly payouts, unaffected by market volatility or stock market dips.</p>
-                </div>
-                <div class="card">
-                    <h3>Transparency</h3>
-                    <p>Track your portfolio and payouts in real-time through our dedicated Investor Dashboard.</p>
-                </div>
+            <div class="stat-card">
+                <h3>Total Returns Paid</h3>
+                <div class="value" id="returns-val" style="color: #2f855a;">₹0.00</div>
+            </div>
+            <div class="stat-card">
+                <h3>Next Payout Date</h3>
+                <div class="value" id="payout-date" style="font-size:1.4rem">15th Jan 2026</div>
             </div>
         </div>
-    </section>
 
-    <script src="js/main.js"></script>
+        <div class="chart-container">
+            <h3 style="margin-top:0;">Portfolio Performance</h3>
+            <canvas id="portfolioChart"></canvas>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script>
+        // Placeholder for Chart - Real data will come from your SheetDB
+        const ctx = document.getElementById('portfolioChart').getContext('2d');
+        new Chart(ctx, {
+            type: 'line',
+            data: {
+                labels: ['Aug', 'Sep', 'Oct', 'Nov', 'Dec', 'Jan'],
+                datasets: [{
+                    label: 'Portfolio Value',
+                    data: [100000, 102500, 105000, 107500, 110000, 112500],
+                    borderColor: '#D4AF37',
+                    tension: 0.3,
+                    fill: true,
+                    backgroundColor: 'rgba(212, 175, 55, 0.1)'
+                }]
+            },
+            options: { responsive: true, maintainAspectRatio: false }
+        });
+    </script>
 </body>
 </html>
