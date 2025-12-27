@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Contact | Omkar Enterprises Investor Relations</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <section class="contact-container">
+        <h2>Partner with Omkar Enterprises</h2>
+        <p>Complete the form below. Our governance team will contact you within 24 hours.</p>
+
+        <form name="investor-inquiry" method="POST" data-netlify="true" action="/thank-you.html">
+            <input type="hidden" name="form-name" value="investor-inquiry">
+            
+            <div class="form-group">
+                <label>Full Legal Name</label>
+                <input type="text" name="name" required>
+            </div>
+
+            <div class="form-group">
+                <label>Proposed Partnership Capital (₹)</label>
+                <select name="tier" required>
+                    <option value="emerging">₹25,000 - ₹1,00,000</option>
+                    <option value="growth">₹1,00,000 - ₹5,00,000</option>
+                    <option value="elite">Above ₹5,00,000</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label>Mobile Number</label>
+                <input type="tel" name="phone" required pattern="[0-9]{10}">
+            </div>
+
+            <button type="submit" class="btn-gold">Initialize Consultation</button>
+        </form>
+    </section>
+</body>
+</html>
