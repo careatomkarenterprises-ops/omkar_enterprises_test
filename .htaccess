@@ -1,0 +1,12 @@
+# Block direct access to backup files
+<Files "*.json">
+    Order Allow,Deny
+    Deny from all
+</Files>
+
+# Allow only specific IPs
+<Files "export/*">
+    Order Deny,Allow
+    Deny from all
+    Allow from 192.168.1.100
+</Files>
