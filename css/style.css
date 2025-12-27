@@ -1,80 +1,76 @@
 /* ===========================================
-   OMKAR ENTERPRISES - MAIN STYLESHEET
+   OMKAR ENTERPRISES - INSTITUTIONAL STYLE
    =========================================== */
 :root {
     --primary-blue: #001F3F;
     --dark-blue: #00152E;
     --gold: #D4AF37;
     --light-gold: #E6C158;
-    --charcoal: #333333;
-    --light-gray: #F8F9FA;
     --white: #FFFFFF;
-    --font-primary: 'Inter', sans-serif;
-    --font-secondary: 'Playfair Display', serif;
+    --light-gray: #F4F7F9;
 }
 
-* { margin: 0; padding: 0; box-sizing: border-box; }
-
 body {
-    font-family: var(--font-primary);
-    color: var(--charcoal);
-    line-height: 1.6;
+    font-family: 'Inter', sans-serif;
+    color: #333;
+    line-height: 1.7;
     background-color: var(--white);
 }
 
-.container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px;
-}
-
-/* Professional Header & Navigation */
+/* NAVIGATION */
 .navbar {
     background: var(--primary-blue);
-    padding: 1rem 0;
-    position: sticky;
-    top: 0;
-    z-index: 1000;
+    padding: 1.2rem 0;
+    border-bottom: 3px solid var(--gold);
 }
 
-.logo-text {
-    color: var(--white);
-    font-family: var(--font-secondary);
-    font-weight: 700;
-    font-size: 1.5rem;
-    text-decoration: none;
-}
+.container { max-width: 1200px; margin: 0 auto; padding: 0 20px; display: flex; justify-content: space-between; align-items: center; }
 
-.nav-menu {
-    display: flex;
-    list-style: none;
-    gap: 20px;
-}
+.logo { color: white; font-weight: 800; font-size: 1.6rem; text-decoration: none; letter-spacing: 1px; }
 
-.nav-menu a {
-    color: var(--white);
-    text-decoration: none;
-    font-weight: 500;
-    transition: color 0.3s;
-}
+.nav-menu { display: flex; list-style: none; gap: 30px; }
 
-.nav-menu a:hover { color: var(--gold); }
+.nav-menu a { color: white; text-decoration: none; font-weight: 500; font-size: 0.95rem; }
 
-/* Institutional Hero Section */
+/* HERO SECTION */
 .hero {
-    background: linear-gradient(rgba(0,31,63,0.9), rgba(0,21,46,0.9)), url('../assets/images/hero-bg.jpg');
+    background: linear-gradient(rgba(0,31,63,0.85), rgba(0,21,46,0.95)), url('https://images.unsplash.com/photo-1560520653-9e0e4c89eb11?auto=format&fit=crop&w=1920');
     background-size: cover;
-    color: var(--white);
-    padding: 100px 0;
+    background-position: center;
+    color: white;
+    padding: 140px 0;
     text-align: center;
 }
 
-.btn-gold {
-    background: var(--gold);
-    color: var(--primary-blue);
-    padding: 12px 30px;
-    border-radius: 5px;
-    text-decoration: none;
-    font-weight: 700;
-    display: inline-block;
+.hero h1 { font-size: 3.5rem; margin-bottom: 20px; font-family: 'Playfair Display', serif; }
+
+.text-gold { color: var(--gold); }
+
+/* CONTENT BLOCKS (This makes it look professional) */
+.section { padding: 80px 0; }
+
+.section-title { text-align: center; margin-bottom: 50px; }
+
+.section-title h2 { font-size: 2.5rem; color: var(--primary-blue); }
+
+.section-title .underline { width: 80px; height: 4px; background: var(--gold); margin: 15px auto; }
+
+/* SERVICE CARDS */
+.grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; }
+
+.card {
+    background: var(--light-gray);
+    padding: 40px;
+    border-radius: 8px;
+    border-bottom: 4px solid transparent;
+    transition: 0.3s;
 }
+
+.card:hover { border-bottom: 4px solid var(--gold); transform: translateY(-10px); background: white; box-shadow: 0 20px 40px rgba(0,0,0,0.1); }
+
+/* BUTTONS */
+.btn-gold { background: var(--gold); color: var(--primary-blue) !important; padding: 12px 30px; border-radius: 4px; font-weight: 700; }
+
+.btn-main { background: var(--gold); color: var(--primary-blue); padding: 15px 40px; text-decoration: none; border-radius: 5px; font-weight: bold; margin: 10px; display: inline-block; }
+
+.btn-sub { border: 2px solid white; color: white; padding: 15px 40px; text-decoration: none; border-radius: 5px; font-weight: bold; margin: 10px; display: inline-block; }
