@@ -3,77 +3,119 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Omkar Enterprises | Premium Private Lending & 2.5% Monthly Payouts</title>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Playfair+Display:wght@700;900&display=swap" rel="stylesheet">
+    <title>Omkar Enterprises | Coming Soon</title>
+    <meta name="description" content="Omkar Enterprises: Institutional-grade private lending and 2.5% monthly payouts. Our new digital portal is launching soon.">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="css/style.css">
+    
+    <style>
+        :root {
+            --navy: #000B18; /* */
+            --gold: #D4AF37; /* */
+            --white: #FFFFFF;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Inter', sans-serif;
+            background: var(--navy);
+            color: var(--white);
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            overflow: hidden;
+        }
+
+        .container {
+            max-width: 800px;
+            padding: 20px;
+            animation: fadeInUp 1s ease-out; /* */
+        }
+
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .logo {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.5rem;
+            letter-spacing: 2px;
+            margin-bottom: 10px;
+        }
+
+        .gold-text { color: var(--gold); }
+
+        h1 {
+            font-size: clamp(2rem, 5vw, 3.5rem);
+            margin-bottom: 20px;
+        }
+
+        p {
+            font-size: 1.2rem;
+            color: #A0AEC0; /* */
+            margin-bottom: 40px;
+            line-height: 1.6;
+        }
+
+        .status-badge {
+            display: inline-block;
+            border: 1px solid var(--gold);
+            padding: 8px 20px;
+            border-radius: 50px;
+            color: var(--gold);
+            font-size: 0.8rem;
+            font-weight: bold;
+            letter-spacing: 2px;
+            margin-bottom: 30px;
+        }
+
+        .contact-box {
+            background: rgba(255, 255, 255, 0.05);
+            padding: 30px;
+            border-radius: 15px;
+            border: 1px solid rgba(212, 175, 55, 0.2);
+        }
+
+        .footer-note {
+            position: absolute;
+            bottom: 30px;
+            width: 100%;
+            font-size: 0.8rem;
+            color: #4A5568;
+        }
+
+        /* Mobile Fix */
+        @media (max-width: 768px) {
+            h1 { font-size: 2rem; } /* */
+            .container { padding: 40px; }
+        }
+    </style>
 </head>
 <body>
 
-    <nav class="navbar">
-        <div class="container nav-flex">
-            <a href="index.html" class="logo">OMKAR <span class="text-gold">ENTERPRISES</span></a>
-            <ul class="nav-menu">
-                <li><a href="legal-framework.html">Security</a></li>
-                <li><a href="investment-tiers.html">Tiers</a></li>
-                <li><a href="about.html">Founder</a></li>
-                <li><a href="investor-login.html" class="login-pill"><i class="fas fa-user-lock"></i> Investor Login</a></li>
-            </ul>
-        </div>
-    </nav>
+    <div class="container">
+        <div class="logo">OMKAR <span class="gold-text">ENTERPRISES</span></div>
+        <div class="status-badge">DIGITAL PORTAL UPGRADE</div>
+        
+        <h1>Something <span class="gold-text">Exceptional</span> is Coming</h1>
+        <p>We are currently refining our institutional private lending platform to provide you with a world-class experience. Our secured 2.5% monthly payout framework remains active.</p>
 
-    <header class="hero">
-        <div class="container">
-            <div class="hero-badge">TRUSTED BY 500+ PARTNERS</div>
-            <h1>Secured Private Lending with <br><span class="text-gold">Contractual Certainty</span></h1>
-            <p class="hero-subtext">Experience the power of 2.5% monthly distributions. No market volatility. Just legal transparency and consistent growth.</p>
-            <div class="hero-action-group">
-                <a href="contact.html" class="btn-gold-main">Get Started Now</a>
-                <a href="how-it-works.html" class="btn-outline">How It Works <i class="fas fa-arrow-right"></i></a>
+        <div class="contact-box">
+            <h3 style="margin-top: 0;">In the meantime, reach us at:</h3>
+            <div style="display: flex; justify-content: center; gap: 30px; flex-wrap: wrap;">
+                <div><i class="fas fa-phone gold-text"></i> +91-9226393837</div>
+                <div><i class="fas fa-envelope gold-text"></i> contact@omkarservices.in</div>
             </div>
         </div>
-    </header>
+    </div>
 
-    <section class="stats-bar">
-        <div class="container grid-4">
-            <div class="stat-item"><h2>2.5%</h2><p>Monthly Payout</p></div>
-            <div class="stat-item"><h2>100%</h2><p>Legal Compliance</p></div>
-            <div class="stat-item"><h2>₹25L+</h2><p>Max Tier Capital</p></div>
-            <div class="stat-item"><h2>24/7</h2><p>Investor Support</p></div>
-        </div>
-    </section>
+    <div class="footer-note">
+        &copy; 2024 Omkar Enterprises. Governed by the Indian Contract Act, 1872.
+    </div>
 
-    <section class="trust-grid-section container">
-        <div class="section-header">
-            <span>UNCOMPROMISING SECURITY</span>
-            <h2>Our Framework of Trust</h2>
-        </div>
-        <div class="grid-3">
-            <div class="feature-card">
-                <div class="icon-box"><i class="fas fa-file-contract"></i></div>
-                <h3>Notarized Agreements</h3>
-                <p>Every transaction is backed by a legally binding loan agreement under Indian Law.</p>
-            </div>
-            <div class="feature-card">
-                <div class="icon-box"><i class="fas fa-shield-check"></i></div>
-                <h3>PDC Security</h3>
-                <p>Post-dated cheques issued as standard security protocol for capital protection.</p>
-            </div>
-            <div class="feature-card">
-                <div class="icon-box"><i class="fas fa-chart-pie"></i></div>
-                <h3>Digital Dashboard</h3>
-                <p>Institutional-grade portal to track your payouts and principal in real-time.</p>
-            </div>
-        </div>
-    </section>
-
-    <section class="cta-banner">
-        <div class="container cta-flex">
-            <h2>Ready to grow your capital with certainty?</h2>
-            <a href="contact.html" class="btn-gold-main">Book a Consultation</a>
-        </div>
-    </section>
-
-    <script src="js/main.js"></script>
 </body>
 </html>
