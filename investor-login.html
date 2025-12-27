@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex, nofollow"> <title>Secure Access Portal | Omkar Enterprises</title>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <style>
+        :root {
+            --brand-navy: #0F172A;
+            --brand-gold: #B45309;
+            --slate-50: #F8FAFC;
+            --slate-200: #E2E8F0;
+            --slate-600: #475569;
+            --white: #FFFFFF;
+        }
+
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body { 
+            font-family: 'Inter', sans-serif; 
+            background-color: var(--slate-50); 
+            display: flex; 
+            flex-direction: column; 
+            min-height: 100vh;
+        }
+
+        /* Simplified Header */
+        .portal-header {
+            background: var(--white);
+            padding: 20px 0;
+            border-bottom: 1px solid var(--slate-200);
+            text-align: center;
+        }
+        .portal-header .logo {
+            font-weight: 700;
+            text-decoration: none;
+            color: var(--brand-navy);
+            font-size: 1.1rem;
+            letter-spacing: 1px;
+        }
+        .portal-header span { color: var(--brand-gold); }
+
+        /* Login Container */
+        .login-main {
+            flex: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+
+        .login-card {
+            background: var(--white);
+            width: 100%;
+            max-width: 420px;
+            padding: 40px;
+            border-radius: 4px;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+            border-top: 5px solid var(--brand-navy);
+        }
+
+        .card-title {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        .card-title i {
+            font-size: 2.5rem;
+            color: var(--brand-gold);
+            margin-bottom: 15px;
+        }
+        .card-title h1 {
+            font-size: 1.25rem;
+            color: var(--brand-navy);
+            font-weight: 700;
+        }
+        .card-title p {
+            font-size: 0.85rem;
+            color: var(--slate-600);
+            margin-top: 5px;
+        }
+
+        /* Form Elements */
+        .form-group { margin-bottom: 20px; }
+        .form-group label {
+            display: block;
+            font-size: 0.85rem;
+            font-weight: 600;
+            margin-bottom: 8px;
+            color: var(--brand-navy);
+        }
+        .form-group input {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid var(--slate-200);
+            border-radius: 4px;
+            font-size: 1rem;
+            transition: border-color 0.2s;
+        }
+        .form-group input:focus {
+            outline: none;
+            border-color: var(--brand-gold);
+            box-shadow: 0 0 0 3px rgba(180, 83, 9, 0.1);
+        }
+
+        .mfa-info {
+            background: #EFF6FF;
+            border: 1px solid #DBEAFE;
+            padding: 12px;
+            border-radius: 4px;
+            font-size: 0.8rem;
+            color: #1E40AF;
+            margin-bottom: 25px;
+            display: flex;
+            gap: 10px;
+            align-items: center;
+        }
+
+        .btn-login {
+            width: 100%;
+            padding: 14px;
+            background: var(--brand-navy);
+            color: var(--white);
+            border: none;
+            border-radius: 4px;
+            font-weight: 700;
+            font-size: 0.95rem;
+            cursor: pointer;
+            letter-spacing: 0.5px;
+            transition: background 0.2s;
+        }
+        .btn-login:hover { background: #1E293B; }
+
+        .form-footer {
+            margin-top: 25px;
+            text-align: center;
+            font-size: 0.85rem;
+        }
+        .form-footer a {
+            color: var(--brand-gold);
+            text-decoration: none;
+            font-weight: 600;
+        }
+        .form-footer a:hover { text-decoration: underline; }
+
+        /* Security Disclaimer */
+        .security-disclaimer {
+            max-width: 420px;
+            margin: 20px auto 0;
+            text-align: center;
+            font-size: 0.7rem;
+            color: #94A3B8;
+            line-height: 1.4;
+        }
+
+        /* Responsive */
+        @media (max-width: 480px) {
+            .login-card { padding: 30px 20px; }
+        }
+    </style>
+</head>
+<body>
+
+    <header class="portal-header">
+        <a href="index.html" class="logo">OMKAR <span>ENTERPRISES</span></a>
+    </header>
+
+    <main class="login-main">
+        <div>
+            <div class="login-card">
+                <div class="card-title">
+                    <i class="fas fa-shield-halved"></i>
+                    <h1>Document Access Portal</h1>
+                    <p>Enter your credentials to access your secure documents.</p>
+                </div>
+
+                <form action="#" onsubmit="return false;">
+                    <div class="form-group">
+                        <label for="investor-id">Investor ID / Registered Email</label>
+                        <input type="text" id="investor-id" placeholder="ID-000000" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="password">Access Key</label>
+                        <input type="password" id="password" required>
+                    </div>
+
+                    <div class="mfa-info">
+                        <i class="fas fa-info-circle"></i>
+                        <span>Secure session requires 2-Factor Authentication (OTP) in the next step.</span>
+                    </div>
+
+                    <button type="submit" class="btn-login">ESTABLISH SECURE SESSION</button>
+                </form>
+
+                <div class="form-footer">
+                    <p><a href="#">Request New Access Key</a></p>
+                    <p style="margin-top: 10px; color: #64748B;">Technical assistance: care@omkarservices.in</p>
+                </div>
+            </div>
+
+            <div class="security-disclaimer">
+                <p><strong>ENCRYPTED SESSION:</strong> This portal is protected by 256-bit SSL encryption. All access attempts are logged with IP tracking for regulatory and audit compliance. Unauthorized access is strictly prohibited under the IT Act, 2000.</p>
+            </div>
+        </div>
+    </main>
+
+    <footer style="padding: 30px 0; text-align: center; font-size: 0.8rem; color: #94A3B8;">
+        <div class="container">
+            &copy; 2025 Omkar Enterprises. Authorized Access Only.
+        </div>
+    </footer>
+
+</body>
+</html>
