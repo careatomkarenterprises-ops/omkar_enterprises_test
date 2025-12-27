@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Same meta tags as index.html -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Compare Omkar Enterprises investment tiers - Foundation, Growth, and Premium plans with fixed 2.5% monthly returns.">
+    <title>Investment Plans | Omkar Enterprises</title>
+    <!-- Include all CSS files -->
+</head>
+<body>
+    <!-- Navigation (Same as index.html) -->
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <h1>Investment Plans</h1>
+            <p>Choose the plan that matches your investment goals</p>
+        </div>
+    </section>
+
+    <!-- Calculator Section -->
+    <section class="section section-light">
+        <div class="container">
+            <div class="calculator-section">
+                <h2>Estimate Your Returns</h2>
+                <p>Use our calculator to see potential returns for different investment amounts</p>
+                
+                <div class="calculator-wrapper">
+                    <div class="calculator-inputs">
+                        <div class="form-group">
+                            <label>Investment Amount</label>
+                            <div class="amount-input-group">
+                                <span class="currency">₹</span>
+                                <input type="number" id="investmentAmountInput" min="25000" max="2500000" value="100000" step="1000">
+                            </div>
+                            <div class="amount-slider">
+                                <input type="range" id="investmentSlider" min="25000" max="2500000" value="100000" step="1000">
+                                <div class="slider-labels">
+                                    <span>₹25K</span>
+                                    <span>₹12.5L</span>
+                                    <span>₹25L</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label>Investment Tier</label>
+                            <div class="tier-selector">
+                                <button class="tier-option active" data-tier="growth">
+                                    <i class="fas fa-chart-line"></i>
+                                    <span>Growth</span>
+                                    <small>2.5% Monthly</small>
+                                </button>
+                                <button class="tier-option" data-tier="premium">
+                                    <i class="fas fa-crown"></i>
+                                    <span>Premium</span>
+                                    <small>2.5% + Bonus</small>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="calculator-results">
+                        <h3>Projected Returns</h3>
+                        <div class="result-row">
+                            <span>Monthly Return</span>
+                            <span id="monthlyResult">₹2,500</span>
+                        </div>
+                        <div class="result-row">
+                            <span>Quarterly Return</span>
+                            <span id="quarterlyResult">₹7,500</span>
+                        </div>
+                        <div class="result-row">
+                            <span>Annual Return</span>
+                            <span id="annualResult">₹30,000</span>
+                        </div>
+                        <div class="result-row highlight">
+                            <span>Total 13-Month Return</span>
+                            <span id="totalResult">₹30,000</span>
+                        </div>
+                        <button class="btn btn-primary" id="viewScheduleBtn">
+                            <i class="fas fa-calendar-alt"></i> View Payment Schedule
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Investment Tiers -->
+    <section class="section" id="tiers">
+        <div class="container">
+            <div class="section-header">
+                <h2>Investment Tiers</h2>
+                <p>Three structured plans designed for different investment levels</p>
+            </div>
+            
+            <div class="tiers-comparison">
+                <!-- Foundation Tier -->
+                <div class="tier-card" id="foundation">
+                    <div class="tier-header">
+                        <div class="tier-name">Foundation</div>
+                        <div class="tier-range">₹25,000 - ₹5,00,000</div>
+                        <div class="tier-description">Entry Level Investment</div>
+                    </div>
+                    
+                    <div class="tier-highlight">
+                        <div class="rate">2.5%</div>
+                        <div class="period">Fixed Monthly Returns</div>
+                    </div>
+                    
+                    <ul class="tier-features">
+                        <li><i class="fas fa-check"></i> <strong>13-Month Agreement</strong></li>
+                        <li><i class="fas fa-check"></i> Fixed 2.5% Monthly Returns</li>
+                        <li><i class="fas fa-check"></i> Monthly Payouts (by 10th working day)</li>
+                        <li><i class="fas fa-check"></i> 8-Month Lock-in Period</li>
+                        <li><i class="fas fa-check"></i> Basic Investor Portal Access</li>
+                        <li><i class="fas fa-check"></i> Email Support</li>
+                        <li><i class="fas fa-times"></i> Performance Bonus</li>
+                        <li><i class="fas fa-times"></i> Dedicated Relationship Manager</li>
+                    </ul>
+                    
+                    <div class="tier-example">
+                        <h4>Example: ₹1,00,000 Investment</h4>
+                        <div class="example-details">
+                            <div class="example-item">
+                                <span>Monthly Return</span>
+                                <span>₹2,500</span>
+                            </div>
+                            <div class="example-item">
+                                <span>Annual Return</span>
+                                <span>₹30,000</span>
+                            </div>
+                            <div class="example-item">
+                                <span>Total 13-Month Return</span>
+                                <span>₹30,000 + Principal</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="tier-cta">
+                        <a href="contact.html" class="btn btn-outline">
+                            <i class="fas fa-envelope"></i> Inquire Now
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Growth Tier (Featured) -->
+                <div class="tier-card featured" id="growth">
+                    <div class="tier-badge">Most Popular</div>
+                    <div class="tier-header">
+                        <div class="tier-name">Growth</div>
+                        <div class="tier-range">₹5,00,000 - ₹25,00,000</div>
+                        <div class="tier-description">Optimal Balance</div>
+                    </div>
+                    
+                    <div class="tier-highlight">
+                        <div class="rate">2.5%</div>
+                        <div class="period">Fixed Monthly Returns</div>
+                    </div>
+                    
+                    <ul class="tier-features">
+                        <li><i class="fas fa-check"></i> <strong>13-Month Agreement</strong></li>
+                        <li><i class="fas fa-check"></i> Fixed 2.5% Monthly Returns</li>
+                        <li><i class="fas fa-check"></i> Monthly Payouts (by 10th working day)</li>
+                        <li><i class="fas fa-check"></i> 8-Month Lock-in Period</li>
+                        <li><i class="fas fa-check"></i> Enhanced Investor Portal</li>
+                        <li><i class="fas fa-check"></i> Priority Support</li>
+                        <li><i class="fas fa-check"></i> Performance Bonus Eligible</li>
+                        <li><i class="fas fa-times"></i> Dedicated Relationship Manager</li>
+                    </ul>
+                    
+                    <div class="tier-example">
+                        <h4>Example: ₹10,00,000 Investment</h4>
+                        <div class="example-details">
+                            <div class="example-item">
+                                <span>Monthly Return</span>
+                                <span>₹25,000</span>
+                            </div>
+                            <div class="example-item">
+                                <span>Annual Return</span>
+                                <span>₹3,00,000</span>
+                            </div>
+                            <div class="example-item">
+                                <span>Total 13-Month Return</span>
+                                <span>₹3,00,000 + Principal</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="tier-cta">
+                        <a href="contact.html" class="btn btn-primary">
+                            <i class="fas fa-calendar-check"></i> Schedule Consultation
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Premium Tier -->
+                <div class="tier-card" id="premium">
+                    <div class="tier-header">
+                        <div class="tier-name">Premium</div>
+                        <div class="tier-range">₹25,00,000+</div>
+                        <div class="tier-description">High Value Investment</div>
+                    </div>
+                    
+                    <div class="tier-highlight">
+                        <div class="rate">2.5%+</div>
+                        <div class="period">Monthly Returns + Bonus</div>
+                    </div>
+                    
+                    <ul class="tier-features">
+                        <li><i class="fas fa-check"></i> <strong>13-Month Agreement</strong></li>
+                        <li><i class="fas fa-check"></i> Fixed 2.5% Monthly Returns</li>
+                        <li><i class="fas fa-check"></i> Monthly Payouts (by 10th working day)</li>
+                        <li><i class="fas fa-check"></i> 8-Month Lock-in Period</li>
+                        <li><i class="fas fa-check"></i> Advanced Investor Portal</li>
+                        <li><i class="fas fa-check"></i> Dedicated Relationship Manager</li>
+                        <li><i class="fas fa-check"></i> Performance Bonus (Up to 0.5%)</li>
+                        <li><i class="fas fa-check"></i> Customized Reporting</li>
+                    </ul>
+                    
+                    <div class="tier-example">
+                        <h4>Example: ₹50,00,000 Investment</h4>
+                        <div class="example-details">
+                            <div class="example-item">
+                                <span>Monthly Return</span>
+                                <span>₹1,25,000+</span>
+                            </div>
+                            <div class="example-item">
+                                <span>Annual Return</span>
+                                <span>₹15,00,000+</span>
+                            </div>
+                            <div class="example-item">
+                                <span>Total 13-Month Return</span>
+                                <span>₹15,00,000+ + Principal</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="tier-cta">
+                        <a href="contact.html" class="btn btn-outline">
+                            <i class="fas fa-phone-alt"></i> Contact for Details
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Payment Schedule -->
+    <section class="section section-light">
+        <div class="container">
+            <div class="section-header">
+                <h2>Typical Payment Schedule</h2>
+                <p>Fixed returns paid monthly, principal returned at term completion</p>
+            </div>
+            
+            <div class="schedule-table">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Month</th>
+                            <th>Payment Type</th>
+                            <th>Amount (Example: ₹10L)</th>
+                            <th>Cumulative Returns</th>
+                            <th>Status</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Month 1-8</td>
+                            <td>Monthly Returns</td>
+                            <td>₹25,000/month</td>
+                            <td>₹2,00,000</td>
+                            <td><span class="badge locked">Lock-in Period</span></td>
+                        </tr>
+                        <tr>
+                            <td>Month 9-12</td>
+                            <td>Monthly Returns</td>
+                            <td>₹25,000/month</td>
+                            <td>₹3,00,000</td>
+                            <td><span class="badge available">Available</span></td>
+                        </tr>
+                        <tr>
+                            <td>Month 13</td>
+                            <td>Principal Return</td>
+                            <td>₹10,00,000</td>
+                            <td>₹3,00,000</td>
+                            <td><span class="badge principal">Principal Return</span></td>
+                        </tr>
+                        <tr class="total-row">
+                            <td colspan="2"><strong>Total 13-Month Return</strong></td>
+                            <td><strong>₹13,00,000</strong></td>
+                            <td><strong>₹3,00,000 Returns</strong></td>
+                            <td><strong>Completed</strong></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Investment Plan FAQs</h2>
+                <p>Common questions about our investment tiers</p>
+            </div>
+            
+            <div class="faq-grid">
+                <div class="faq-item">
+                    <h4>What happens after 13 months?</h4>
+                    <p>At the end of the 13-month term, your principal is returned, and you can choose to renew your investment, increase your amount, or withdraw your funds.</p>
+                </div>
+                
+                <div class="faq-item">
+                    <h4>Can I invest additional amounts?</h4>
+                    <p>Yes, you can make additional investments at any time. Each new investment starts a fresh 13-month cycle.</p>
+                </div>
+                
+                <div class="faq-item">
+                    <h4>What is the performance bonus?</h4>
+                    <p>Premium tier investors may receive an additional 0.5% return based on overall portfolio performance and tenure.</p>
+                </div>
+                
+                <div class="faq-item">
+                    <h4>How are returns taxed?</h4>
+                    <p>Returns are subject to applicable income tax laws in India. We provide necessary documentation for tax filing purposes.</p>
+                </div>
+                
+                <div class="faq-item">
+                    <h4>What is the lock-in period?</h4>
+                    <p>The initial 8 months are a lock-in period where early withdrawal may be subject to terms specified in your agreement.</p>
+                </div>
+                
+                <div class="faq-item">
+                    <h4>Can I upgrade my tier?</h4>
+                    <p>Yes, you can upgrade to a higher tier when your investment reaches the minimum threshold for that tier.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="container">
+            <div class="cta-content">
+                <h2>Start Your Investment Journey</h2>
+                <p>Choose transparency, choose predictability, choose Omkar Enterprises.</p>
+                <div class="cta-buttons">
+                    <a href="contact.html" class="btn btn-light btn-large">
+                        <i class="fas fa-calendar"></i> Schedule Consultation
+                    </a>
+                    <a href="investor-login.html" class="btn btn-secondary btn-large">
+                        <i class="fas fa-user"></i> Existing Investor Login
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer (Same as index.html) -->
+
+    <!-- JavaScript Files -->
+    <script src="js/main.js"></script>
+    <script src="js/mobile-menu.js"></script>
+    <script src="js/calculator.js"></script>
+</body>
+</html>
