@@ -2,40 +2,67 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Investment Tiers | Omkar Enterprises</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Investment Tiers | Omkar Enterprises | 2.5% Monthly Returns</title>
     <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <style>
+        .tier-container { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; padding: 50px 0; }
+        .tier-card { 
+            background: white; border: 1px solid #e2e8f0; border-radius: 15px; padding: 40px; 
+            text-align: center; transition: 0.4s; position: relative; overflow: hidden;
+        }
+        .tier-card.featured { border: 2px solid var(--gold); transform: scale(1.05); z-index: 2; box-shadow: 0 20px 40px rgba(0,0,0,0.1); }
+        .tier-price { font-size: 2.5rem; font-weight: 800; color: var(--navy); margin: 20px 0; }
+        .tier-benefit { list-style: none; padding: 0; margin: 30px 0; text-align: left; }
+        .tier-benefit li { margin-bottom: 12px; font-size: 0.95rem; display: flex; align-items: center; }
+        .tier-benefit li::before { content: '✓'; color: var(--gold); font-weight: bold; margin-right: 10px; }
+        .badge { background: var(--gold); color: var(--navy); padding: 5px 15px; border-radius: 20px; font-size: 0.7rem; font-weight: bold; position: absolute; top: 20px; right: 20px; }
+    </style>
 </head>
-<body>
-    <section class="container section">
-        <h2 class="text-center">Select Your Partnership Tier</h2>
-        <div class="tiers-grid">
+<body class="bg-light">
+    <section class="container">
+        <div style="text-align:center; padding-top: 80px;">
+            <h1 style="font-family: 'Playfair Display'; font-size: 3rem;">Tailored <span class="text-gold">Investment Tiers</span></h1>
+            <p>Select a framework that aligns with your financial objectives.</p>
+        </div>
+
+        <div class="tier-container">
             <div class="tier-card">
-                <h3>Emerging</h3>
-                <div class="price">₹25K - ₹1L</div>
-                <ul>
-                    <li>2.5% Monthly Payout</li>
-                    <li>Digital Agreement</li>
-                    <li>Standard Support</li>
+                <h3>Emerging Partner</h3>
+                <div class="tier-price">₹25,000<span style="font-size: 1rem; color: #777;">+</span></div>
+                <ul class="tier-benefit">
+                    <li>2.5% Monthly Fixed Payout</li>
+                    <li>Notarized Agreement (Digital)</li>
+                    <li>Basic Dashboard Access</li>
+                    <li>13 Month Tenure</li>
                 </ul>
+                <a href="contact.html" class="btn-gold-main" style="width:100%">Inquire Now</a>
             </div>
-            <div class="tier-card gold-border">
-                <div class="badge">Most Popular</div>
-                <h3>Growth</h3>
-                <div class="price">₹1L - ₹5L</div>
-                <ul>
-                    <li>2.5% Monthly Payout</li>
-                    <li>Notarized Agreement</li>
-                    <li>PDC Security</li>
+
+            <div class="tier-card featured">
+                <div class="badge">MOST POPULAR</div>
+                <h3>Elite Strategist</h3>
+                <div class="tier-price">₹5,00,000<span style="font-size: 1rem; color: #777;">+</span></div>
+                <ul class="tier-benefit">
+                    <li>2.5% Monthly Fixed Payout</li>
+                    <li>Physical Notarized Contract</li>
+                    <li>Post-Dated Cheque Security</li>
+                    <li>Priority Payout Support</li>
                 </ul>
+                <a href="contact.html" class="btn-gold-main" style="width:100%">Secure This Tier</a>
             </div>
+
             <div class="tier-card">
-                <h3>Elite</h3>
-                <div class="price">Above ₹5L</div>
-                <ul>
-                    <li>2.5% Monthly Payout</li>
-                    <li>Priority Reconciliation</li>
-                    <li>Direct Relationship Manager</li>
+                <h3>Institutional</h3>
+                <div class="tier-price">₹25,00,000</div>
+                <ul class="tier-benefit">
+                    <li>Customized Yield Framework</li>
+                    <li>Full Legal Indemnity</li>
+                    <li>Direct Founder Consultation</li>
+                    <li>VIP Concierge Support</li>
                 </ul>
+                <a href="contact.html" class="btn-gold-main" style="width:100%">Contact Founder</a>
             </div>
         </div>
     </section>
