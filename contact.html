@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Same meta tags as index.html -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Contact Omkar Enterprises for investment inquiries, consultations, and investor support.">
+    <title>Contact Us | Omkar Enterprises</title>
+    <!-- Include all CSS files -->
+</head>
+<body>
+    <!-- Navigation (Same as index.html) -->
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <h1>Contact Us</h1>
+            <p>Get in touch for investment inquiries and support</p>
+        </div>
+    </section>
+
+    <!-- Contact Information -->
+    <section class="section">
+        <div class="container">
+            <div class="contact-info-grid">
+                <div class="contact-card">
+                    <div class="contact-icon">
+                        <i class="fas fa-phone"></i>
+                    </div>
+                    <h3>Phone Support</h3>
+                    <p>+91 922 639 3837</p>
+                    <small>Mon-Fri: 10:00 AM - 6:00 PM IST</small>
+                    <a href="tel:+919226393837" class="btn btn-outline btn-small">
+                        <i class="fas fa-phone-alt"></i> Call Now
+                    </a>
+                </div>
+                
+                <div class="contact-card">
+                    <div class="contact-icon">
+                        <i class="fas fa-envelope"></i>
+                    </div>
+                    <h3>Email</h3>
+                    <p>care@omkarservices.in</p>
+                    <small>Response within 24 hours</small>
+                    <a href="mailto:care@omkarservices.in" class="btn btn-outline btn-small">
+                        <i class="fas fa-envelope"></i> Send Email
+                    </a>
+                </div>
+                
+                <div class="contact-card">
+                    <div class="contact-icon">
+                        <i class="fas fa-calendar-alt"></i>
+                    </div>
+                    <h3>Schedule Consultation</h3>
+                    <p>Book a personalized meeting</p>
+                    <small>30-minute slots available</small>
+                    <button class="btn btn-primary btn-small" id="scheduleBtn">
+                        <i class="fas fa-calendar-check"></i> Book Now
+                    </button>
+                </div>
+                
+                <div class="contact-card">
+                    <div class="contact-icon">
+                        <i class="fas fa-comments"></i>
+                    </div>
+                    <h3>Investor Support</h3>
+                    <p>Existing investors portal</p>
+                    <small>24/7 access to your dashboard</small>
+                    <a href="investor-login.html" class="btn btn-outline btn-small">
+                        <i class="fas fa-user"></i> Investor Login
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Form & Map -->
+    <section class="section section-light">
+        <div class="container">
+            <div class="contact-wrapper">
+                <div class="contact-form-section">
+                    <h2>Send Us a Message</h2>
+                    <p>Fill out the form below and we'll get back to you shortly</p>
+                    
+                    <form id="contactForm" class="contact-form">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="name">Full Name *</label>
+                                <input type="text" id="name" name="name" required placeholder="Enter your full name">
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="email">Email Address *</label>
+                                <input type="email" id="email" name="email" required placeholder="Enter your email">
+                            </div>
+                        </div>
+                        
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="phone">Phone Number *</label>
+                                <input type="tel" id="phone" name="phone" required placeholder="Enter your phone number">
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="subject">Subject *</label>
+                                <select id="subject" name="subject" required>
+                                    <option value="">Select a topic</option>
+                                    <option value="investment">Investment Inquiry</option>
+                                    <option value="consultation">Schedule Consultation</option>
+                                    <option value="existing">Existing Investor Query</option>
+                                    <option value="documentation">Documentation Request</option>
+                                    <option value="other">Other</option>
+                                </select>
+                            </div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="investment">Investment Amount (if applicable)</label>
+                            <select id="investment" name="investment">
+                                <option value="">Select amount range</option>
+                                <option value="25k-5l">₹25,000 - ₹5,00,000 (Foundation)</option>
+                                <option value="5l-25l">₹5,00,000 - ₹25,00,000 (Growth)</option>
+                                <option value="25l+">₹25,00,000+ (Premium)</option>
+                                <option value="undecided">Not decided yet</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="message">Message *</label>
+                            <textarea id="message" name="message" rows="5" required placeholder="Tell us about your inquiry..."></textarea>
+                        </div>
+                        
+                        <div class="form-group">
+                            <div class="checkbox">
+                                <input type="checkbox" id="consent" name="consent" required>
+                                <label for="consent">
+                                    I agree to receive communications from Omkar Enterprises regarding investment opportunities. I understand that this is not a bank deposit and involves risks.
+                                </label>
+                            </div>
+                        </div>
+                        
+                        <div class="form-submit">
+                            <button type="submit" class="btn btn-primary btn-large">
+                                <i class="fas fa-paper-plane"></i> Send Message
+                            </button>
+                        </div>
+                    </form>
+                </div>
+                
+                <div class="contact-info-section">
+                    <h2>Office Information</h2>
+                    
+                    <div class="office-info">
+                        <div class="info-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <div>
+                                <h4>Registered Office</h4>
+                                <p>Omkar Enterprises</p>
+                                <p>Mumbai, Maharashtra</p>
+                                <p>India</p>
+                            </div>
+                        </div>
+                        
+                        <div class="info-item">
+                            <i class="fas fa-clock"></i>
+                            <div>
+                                <h4>Business Hours</h4>
+                                <p>Monday - Friday: 10:00 AM - 6:00 PM</p>
+                                <p>Saturday: 10:00 AM - 2:00 PM</p>
+                                <p>Sunday: Closed</p>
+                            </div>
+                        </div>
+                        
+                        <div class="info-item">
+                            <i class="fas fa-exclamation-circle"></i>
+                            <div>
+                                <h4>Important Notice</h4>
+                                <p>All meetings are by appointment only. Please schedule consultations in advance. For investor portal access issues, use the password reset feature or email support.</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="quick-links">
+                        <h4>Quick Links</h4>
+                        <ul>
+                            <li><a href="how-it-works.html"><i class="fas fa-arrow-right"></i> How It Works</a></li>
+                            <li><a href="investment-tiers.html"><i class="fas fa-arrow-right"></i> Investment Plans</a></li>
+                            <li><a href="faq.html"><i class="fas fa-arrow-right"></i> FAQ</a></li>
+                            <li><a href="investor-login.html"><i class="fas fa-arrow-right"></i> Investor Login</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Preview -->
+    <section class="section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Common Questions</h2>
+                <p>Quick answers to frequent inquiries</p>
+            </div>
+            
+            <div class="faq-preview">
+                <div class="faq-item">
+                    <h4>How soon will I get a response?</h4>
+                    <p>We respond to all inquiries within 24 hours on business days. Investment consultations are typically scheduled within 2-3 business days.</p>
+                </div>
+                
+                <div class="faq-item">
+                    <h4>What documents do I need for the first meeting?</h4>
+                    <p>For initial consultations, just bring your questions. Formal documentation is only required when proceeding with an investment.</p>
+                </div>
+                
+                <div class="faq-item">
+                    <h4>Can I visit your office?</h4>
+                    <p>Yes, but by appointment only. Please schedule a meeting in advance so we can ensure someone is available to assist you.</p>
+                </div>
+                
+                <div class="faq-item">
+                    <h4>Do you offer virtual meetings?</h4>
+                    <p>Yes, we offer video consultations for investors who prefer remote meetings. These can be scheduled through our booking system.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer (Same as index.html) -->
+
+    <!-- JavaScript Files -->
+    <script src="js/main.js"></script>
+    <script src="js/mobile-menu.js"></script>
+    
+    <script>
+        // Contact Form Handling
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Get form data
+            const formData = new FormData(this);
+            const data = Object.fromEntries(formData);
+            
+            // Show loading state
+            const submitBtn = this.querySelector('button[type="submit"]');
+            const originalText = submitBtn.innerHTML;
+            submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Sending...';
+            submitBtn.disabled = true;
+            
+            // Simulate form submission (replace with actual API call)
+            setTimeout(() => {
+                // Show success message
+                alert('Thank you! Your message has been sent. We will contact you within 24 hours.');
+                
+                // Reset form
+                this.reset();
+                
+                // Reset button
+                submitBtn.innerHTML = originalText;
+                submitBtn.disabled = false;
+            }, 1500);
+        });
+        
+        // Schedule Consultation Button
+        document.getElementById('scheduleBtn').addEventListener('click', function() {
+            // Redirect to scheduling or show modal
+            const name = prompt('Please enter your name for scheduling:');
+            if (name) {
+                const phone = prompt('Please enter your phone number:');
+                if (phone) {
+                    alert(`Thank you ${name}! Our team will call you at ${phone} within 24 hours to schedule your consultation.`);
+                }
+            }
+        });
+        
+        // Phone number formatting
+        document.getElementById('phone').addEventListener('input', function(e) {
+            let value = e.target.value.replace(/\D/g, '');
+            if (value.length > 10) value = value.substring(0, 10);
+            
+            if (value.length > 6) {
+                value = value.replace(/(\d{3})(\d{3})(\d{4})/, '$1-$2-$3');
+            } else if (value.length > 3) {
+                value = value.replace(/(\d{3})(\d{1,3})/, '$1-$2');
+            }
+            
+            e.target.value = value;
+        });
+    </script>
+</body>
+</html>
