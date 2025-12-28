@@ -1,9 +1,476 @@
-<meta name="robots" content="noindex, nofollow">
-<div class="login-box">
-    <h2>Secure Investor Access</h2>
-    <form id="loginForm">
-        <input type="text" id="investor-id" placeholder="Investor ID" required>
-        <input type="password" id="password" placeholder="Access Key" required>
-        <button type="submit">Enter Dashboard</button>
-    </form>
-</div>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Investor Login | Omkar Enterprises Investor Portal</title>
+    <meta name="description" content="Secure login portal for Omkar Enterprises investors. Access your investment dashboard, statements, and documents.">
+    
+    <!-- SEO Meta Tags -->
+    <meta name="robots" content="noindex, nofollow">
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://omkarenterprises.in/investor-login.html">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="assets/icons/favicon.ico">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Styles -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body class="login-page">
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <a href="index.html" class="logo">
+                <img src="assets/icons/logo.svg" alt="Omkar Enterprises Logo" class="logo-icon" width="40" height="40">
+                <span class="logo-text">Omkar Enterprises</span>
+            </a>
+            <button class="hamburger" id="hamburger" aria-label="Toggle navigation menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="how-it-works.html">How It Works</a></li>
+                <li><a href="investment-tiers.html">Investment Tiers</a></li>
+                <li><a href="legal-framework.html">Legal Framework</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="investor-login.html" class="active nav-cta">Investor Login</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Login Section -->
+    <section class="section" style="padding-top: 150px; padding-bottom: 100px;">
+        <div class="container">
+            <div class="login-container">
+                <div class="login-card">
+                    <div class="login-header">
+                        <div class="login-logo">
+                            <i class="fas fa-lock" style="font-size: 2rem; color: var(--gold);"></i>
+                            <h2>Investor Portal Login</h2>
+                        </div>
+                        <p>Secure access to your investment dashboard</p>
+                    </div>
+                    
+                    <form id="loginForm" class="login-form">
+                        <div class="form-group">
+                            <label for="investorId">Investor ID *</label>
+                            <div class="input-with-icon">
+                                <i class="fas fa-id-card"></i>
+                                <input type="text" id="investorId" name="investorId" required 
+                                       placeholder="Enter your Investor ID (e.g., OE-INV-1001)">
+                            </div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="password">Password *</label>
+                            <div class="input-with-icon">
+                                <i class="fas fa-key"></i>
+                                <input type="password" id="password" name="password" required 
+                                       placeholder="Enter your password">
+                                <button type="button" class="password-toggle" id="passwordToggle">
+                                    <i class="fas fa-eye"></i>
+                                </button>
+                            </div>
+                        </div>
+                        
+                        <div class="form-options">
+                            <div class="checkbox-group">
+                                <input type="checkbox" id="rememberMe" name="rememberMe">
+                                <label for="rememberMe">Remember me</label>
+                            </div>
+                            <a href="#forgot-password" class="forgot-link">Forgot Password?</a>
+                        </div>
+                        
+                        <div class="form-group">
+                            <button type="submit" class="btn btn-primary btn-large btn-block">
+                                <i class="fas fa-sign-in-alt"></i> Sign In
+                            </button>
+                        </div>
+                        
+                        <div class="login-notice">
+                            <p><i class="fas fa-info-circle"></i> Access restricted to active investors only.</p>
+                        </div>
+                    </form>
+                    
+                    <div class="login-footer">
+                        <p>Not an investor yet? <a href="contact.html">Schedule a consultation</a></p>
+                        <p><small>Having trouble logging in? Contact: <a href="mailto:support@omkarenterprises.in">support@omkarenterprises.in</a></small></p>
+                    </div>
+                </div>
+                
+                <div class="login-info">
+                    <div class="info-card">
+                        <h3><i class="fas fa-shield-alt"></i> Secure Portal</h3>
+                        <ul>
+                            <li><i class="fas fa-check"></i> 256-bit SSL encryption</li>
+                            <li><i class="fas fa-check"></i> Two-factor authentication ready</li>
+                            <li><i class="fas fa-check"></i> Session timeout: 30 minutes</li>
+                            <li><i class="fas fa-check"></i> Activity monitoring</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="info-card">
+                        <h3><i class="fas fa-chart-line"></i> Portal Features</h3>
+                        <ul>
+                            <li><i class="fas fa-check"></i> Investment dashboard</li>
+                            <li><i class="fas fa-check"></i> Payment history & statements</li>
+                            <li><i class="fas fa-check"></i> Document access</li>
+                            <li><i class="fas fa-check"></i> Tax information</li>
+                            <li><i class="fas fa-check"></i> Communication center</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="info-card demo-info">
+                        <h3><i class="fas fa-vial"></i> Demo Access</h3>
+                        <p>Try these demo credentials:</p>
+                        <div class="demo-credentials">
+                            <p><strong>Investor ID:</strong> OE-INV-1001</p>
+                            <p><strong>Password:</strong> demo123</p>
+                        </div>
+                        <p><small>Demo data for testing purposes only</small></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Security Information -->
+    <section class="section section-light">
+        <div class="container">
+            <div class="security-info">
+                <h3><i class="fas fa-exclamation-triangle"></i> Security Guidelines</h3>
+                <div class="guidelines">
+                    <div class="guideline">
+                        <h4><i class="fas fa-user-secret"></i> Protect Your Credentials</h4>
+                        <p>Never share your login credentials with anyone. We will never ask for your password via email or phone.</p>
+                    </div>
+                    <div class="guideline">
+                        <h4><i class="fas fa-sign-out-alt"></i> Log Out Properly</h4>
+                        <p>Always log out after your session, especially when using shared or public computers.</p>
+                    </div>
+                    <div class="guideline">
+                        <h4><i class="fas fa-history"></i> Monitor Activity</h4>
+                        <p>Regularly review your account activity and report any suspicious behavior immediately.</p>
+                    </div>
+                    <div class="guideline">
+                        <h4><i class="fas fa-lock"></i> Use Secure Connections</h4>
+                        <p>Only access the portal through secure, private internet connections.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-section">
+                <div class="footer-logo">
+                    <img src="assets/icons/logo.svg" alt="Omkar Enterprises Logo" class="logo-icon" width="40" height="40">
+                    <span class="logo-text">Omkar Enterprises</span>
+                </div>
+                <p class="footer-description">
+                    Structured Private Lending Partnerships<br>
+                    Transparency Through Contractual Certainty
+                </p>
+                <div class="footer-address">
+                    <p><i class="fas fa-map-marker-alt"></i> BK 673, Sai Baba Colony, Opp. Rajram Furniturewala, Ulhasnagar 421003, Thane, Maharashtra</p>
+                </div>
+            </div>
+            
+            <div class="footer-section">
+                <h3>Important Links</h3>
+                <ul class="footer-links">
+                    <li><a href="assets/documents/sample-agreement.pdf">Sample Agreement</a></li>
+                    <li><a href="investment-tiers.html">Investment Tiers</a></li>
+                    <li><a href="legal-framework.html">Legal Framework</a></li>
+                    <li><a href="faq.html">FAQ</a></li>
+                    <li><a href="about.html">About Founder</a></li>
+                    <li><a href="onboarding.html">Onboarding Process</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-section">
+                <h3>Legal</h3>
+                <ul class="footer-links">
+                    <li><a href="privacy-policy.html">Privacy Policy</a></li>
+                    <li><a href="terms.html">Terms of Use</a></li>
+                    <li><a href="disclaimer.html">Risk Disclaimer</a></li>
+                    <li><a href="legal-framework.html#dispute">Dispute Resolution</a></li>
+                    <li><a href="legal-framework.html#compliance">Compliance Statement</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-section">
+                <h3>Contact</h3>
+                <div class="footer-contact">
+                    <p><strong>For New Inquiries:</strong><br>
+                    Consultation Form Only</p>
+                    <p><strong>For Existing Partners:</strong><br>
+                    Email: partners@omkarenterprises.in</p>
+                    <p><strong>Portal Support:</strong><br>
+                    Email: support@omkarenterprises.in</p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <div class="footer-disclaimer">
+                <p>⚠️ <strong>IMPORTANT DISCLAIMER:</strong> Omkar Enterprises enters into private loan agreements with individuals. This is NOT a bank deposit, NOT insured, NOT regulated by RBI/SEBI as a deposit-taking entity, and NOT a guaranteed return scheme. Capital is at risk. Returns depend on business performance. Past returns don't indicate future results. Consult your financial and legal advisors before proceeding.</p>
+            </div>
+            <div class="footer-copyright">
+                <p>© <span id="currentYear">2024</span> Omkar Enterprises. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="js/main.js"></script>
+    <script src="js/investor-portal.js"></script>
+    
+    <style>
+        .login-page {
+            background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+            min-height: 100vh;
+        }
+        
+        .login-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .login-card {
+            background: white;
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: var(--shadow);
+        }
+        
+        .login-header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        
+        .login-logo {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 15px;
+        }
+        
+        .login-form {
+            margin-bottom: 30px;
+        }
+        
+        .input-with-icon {
+            position: relative;
+        }
+        
+        .input-with-icon i:first-child {
+            position: absolute;
+            left: 15px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: #666;
+        }
+        
+        .input-with-icon input {
+            width: 100%;
+            padding: 12px 15px 12px 45px;
+            border: 1px solid #e9ecef;
+            border-radius: 5px;
+            font-size: 1rem;
+        }
+        
+        .password-toggle {
+            position: absolute;
+            right: 15px;
+            top: 50%;
+            transform: translateY(-50%);
+            background: none;
+            border: none;
+            color: #666;
+            cursor: pointer;
+        }
+        
+        .form-options {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin: 20px 0 30px;
+        }
+        
+        .checkbox-group {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        
+        .forgot-link {
+            color: var(--primary-blue);
+            text-decoration: none;
+            font-size: 0.9rem;
+        }
+        
+        .btn-block {
+            width: 100%;
+        }
+        
+        .login-notice {
+            background: #f8f9fa;
+            padding: 15px;
+            border-radius: 5px;
+            margin-top: 20px;
+            text-align: center;
+            font-size: 0.9rem;
+            color: #666;
+        }
+        
+        .login-footer {
+            text-align: center;
+            padding-top: 20px;
+            border-top: 1px solid #e9ecef;
+        }
+        
+        .login-footer a {
+            color: var(--primary-blue);
+            text-decoration: none;
+        }
+        
+        .login-info {
+            display: flex;
+            flex-direction: column;
+            gap: 25px;
+        }
+        
+        .info-card {
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: var(--shadow);
+        }
+        
+        .info-card h3 {
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            color: var(--primary-blue);
+        }
+        
+        .info-card ul {
+            list-style: none;
+            padding-left: 0;
+        }
+        
+        .info-card li {
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .info-card li i {
+            color: var(--success);
+        }
+        
+        .demo-info {
+            background: #f0f7ff;
+            border: 1px solid #d1e7ff;
+        }
+        
+        .demo-credentials {
+            background: white;
+            padding: 15px;
+            border-radius: 5px;
+            margin: 15px 0;
+        }
+        
+        .security-info {
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+        
+        .security-info h3 {
+            text-align: center;
+            margin-bottom: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 15px;
+            color: var(--primary-blue);
+        }
+        
+        .guidelines {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 30px;
+        }
+        
+        .guideline {
+            background: white;
+            padding: 25px;
+            border-radius: 10px;
+            box-shadow: var(--shadow);
+        }
+        
+        .guideline h4 {
+            margin-bottom: 15px;
+            color: var(--primary-blue);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        @media (max-width: 991px) {
+            .login-container {
+                grid-template-columns: 1fr;
+                gap: 30px;
+            }
+            
+            .guidelines {
+                grid-template-columns: 1fr;
+            }
+        }
+        
+        @media (max-width: 767px) {
+            .login-card {
+                padding: 30px 25px;
+            }
+            
+            .info-card {
+                padding: 25px 20px;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .login-card {
+                padding: 25px 20px;
+            }
+            
+            .form-options {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 15px;
+            }
+        }
+    </style>
+</body>
+</html>
