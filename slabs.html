@@ -1,0 +1,849 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Investment Tiers | Omkar Enterprises | Partnership Slabs</title>
+    <meta name="description" content="Choose your investment tier: Silver (₹25K-₹1L), Gold (₹1L-₹5L), Platinum (₹5L+). All tiers secured by PDC with 2-2.5% monthly returns.">
+    
+    <link rel="canonical" href="https://omkarservices.in/slabs.html">
+    
+    <!-- Schema Markup -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "ItemList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "item": {
+            "@type": "FinancialProduct",
+            "name": "Silver Tier Partnership",
+            "description": "₹25,000 - ₹1,00,000 investment with 2.0% monthly returns",
+            "interestRate": "24% annual",
+            "termsOfService": "https://omkarservices.in/legal-framework.html"
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "item": {
+            "@type": "FinancialProduct",
+            "name": "Gold Tier Partnership",
+            "description": "₹1,00,000 - ₹5,00,000 investment with 2.2% monthly returns",
+            "interestRate": "26.4% annual",
+            "termsOfService": "https://omkarservices.in/legal-framework.html"
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "item": {
+            "@type": "FinancialProduct",
+            "name": "Platinum Tier Partnership",
+            "description": "₹5,00,000+ investment with 2.5% monthly returns",
+            "interestRate": "30% annual",
+            "termsOfService": "https://omkarservices.in/legal-framework.html"
+          }
+        }
+      ]
+    }
+    </script>
+    
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        /* Additional Slabs Page Styles */
+        .slabs-hero {
+            padding: var(--space-xxl) 0;
+            background: linear-gradient(135deg, rgba(10, 26, 45, 0.95) 0%, rgba(26, 32, 44, 0.95) 100%);
+            text-align: center;
+        }
+        
+        .tiers-grid-slabs {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: var(--space-xl);
+            margin: var(--space-xxl) auto;
+            max-width: 1200px;
+            padding: 0 var(--space-md);
+        }
+        
+        .tier-card-slabs {
+            background-color: var(--bg-card);
+            border: 1px solid var(--charcoal);
+            border-radius: var(--border-radius-lg);
+            overflow: hidden;
+            transition: all var(--transition-normal);
+            position: relative;
+        }
+        
+        .tier-card-slabs.featured {
+            border-color: var(--gold);
+            transform: translateY(-10px);
+            box-shadow: var(--shadow-lg);
+        }
+        
+        .tier-badge-slabs {
+            display: inline-block;
+            padding: 0.5rem 1.5rem;
+            border-radius: 20px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: var(--space-sm);
+            font-size: 0.9rem;
+        }
+        
+        .tier-badge-slabs.silver {
+            background-color: #C0C0C0;
+            color: var(--navy-dark);
+        }
+        
+        .tier-badge-slabs.gold {
+            background-color: var(--gold);
+            color: var(--navy-dark);
+            position: relative;
+        }
+        
+        .tier-badge-slabs.platinum {
+            background-color: #E5E4E2;
+            color: var(--navy-dark);
+        }
+        
+        .badge-popular {
+            position: absolute;
+            top: -8px;
+            right: -8px;
+            background-color: #FF6B6B;
+            color: white;
+            font-size: 0.7rem;
+            padding: 0.25rem 0.5rem;
+            border-radius: 10px;
+        }
+        
+        .tier-header-slabs {
+            padding: var(--space-xl);
+            text-align: center;
+            border-bottom: 1px solid var(--charcoal);
+            background-color: var(--bg-card-light);
+        }
+        
+        .tier-price-range {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--text-white);
+            margin: var(--space-sm) 0;
+        }
+        
+        .tier-body-slabs {
+            padding: var(--space-xl);
+        }
+        
+        .tier-returns-slabs {
+            text-align: center;
+            margin-bottom: var(--space-lg);
+            padding-bottom: var(--space-lg);
+            border-bottom: 1px solid var(--charcoal);
+        }
+        
+        .returns-percent-slabs {
+            font-size: 3.5rem;
+            font-weight: 800;
+            color: var(--gold);
+            line-height: 1;
+            font-family: var(--font-heading);
+        }
+        
+        .returns-label-slabs {
+            font-size: 0.9rem;
+            color: var(--text-gray);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-top: 0.5rem;
+        }
+        
+        .returns-bonus {
+            margin-top: 0.5rem;
+            font-size: 0.85rem;
+            color: var(--success);
+            font-weight: 600;
+        }
+        
+        .tier-features-slabs h4 {
+            font-size: 1rem;
+            margin-bottom: var(--space-sm);
+            color: var(--text-gray);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        
+        .tier-features-slabs ul {
+            list-style: none;
+            margin-bottom: var(--space-lg);
+        }
+        
+        .tier-features-slabs li {
+            margin-bottom: var(--space-sm);
+            display: flex;
+            align-items: flex-start;
+            gap: var(--space-xs);
+            font-size: 0.9rem;
+            line-height: 1.5;
+        }
+        
+        .tier-features-slabs i {
+            color: var(--gold);
+            margin-top: 0.2rem;
+            flex-shrink: 0;
+        }
+        
+        .tier-calculation {
+            margin-top: var(--space-lg);
+            padding-top: var(--space-lg);
+            border-top: 1px solid var(--charcoal);
+        }
+        
+        .tier-calculation h4 {
+            font-size: 1rem;
+            margin-bottom: var(--space-sm);
+            color: var(--text-gray);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        
+        .calculation-example {
+            background-color: var(--bg-card-light);
+            border-radius: var(--border-radius);
+            padding: var(--space-md);
+        }
+        
+        .calc-row {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 0.5rem;
+            font-size: 0.9rem;
+            padding: 0.25rem 0;
+        }
+        
+        .calc-row.bonus {
+            color: var(--success);
+            font-weight: 600;
+            border-top: 1px solid var(--charcoal);
+            padding-top: 0.5rem;
+            margin-top: 0.5rem;
+        }
+        
+        .calc-result {
+            border-top: 2px solid var(--gold);
+            font-weight: 700;
+            color: var(--gold);
+            padding-top: 0.75rem;
+            margin-top: 0.5rem;
+        }
+        
+        .tier-footer-slabs {
+            padding: var(--space-xl);
+            background-color: var(--bg-dark);
+            border-top: 1px solid var(--charcoal);
+            text-align: center;
+        }
+        
+        .tier-footer-slabs .btn-primary {
+            width: 100%;
+            max-width: 300px;
+        }
+        
+        .comparison-section {
+            padding: var(--space-xxl) 0;
+            background-color: var(--bg-card);
+        }
+        
+        .comparison-table {
+            overflow-x: auto;
+            margin-top: var(--space-xl);
+            border: 1px solid var(--charcoal);
+            border-radius: var(--border-radius-lg);
+        }
+        
+        .comparison-table table {
+            width: 100%;
+            border-collapse: collapse;
+            min-width: 800px;
+        }
+        
+        .comparison-table th,
+        .comparison-table td {
+            padding: var(--space-md);
+            text-align: center;
+            border: 1px solid var(--charcoal);
+        }
+        
+        .comparison-table th {
+            background-color: var(--bg-card-light);
+            color: var(--text-white);
+            font-weight: 600;
+            font-size: 1.1rem;
+        }
+        
+        .comparison-table td {
+            color: var(--text-gray);
+        }
+        
+        .comparison-table .feature {
+            text-align: left;
+            background-color: var(--bg-card-light);
+            color: var(--text-white);
+            font-weight: 500;
+        }
+        
+        .comparison-table .yes {
+            color: var(--success);
+            font-weight: 600;
+        }
+        
+        .comparison-table .no {
+            color: var(--text-gray);
+            opacity: 0.5;
+        }
+        
+        @media (max-width: 768px) {
+            .tiers-grid-slabs {
+                grid-template-columns: 1fr;
+                gap: var(--space-lg);
+            }
+            
+            .tier-card-slabs.featured {
+                transform: none;
+            }
+            
+            .returns-percent-slabs {
+                font-size: 2.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container nav-container">
+            <a href="index.html" class="logo">
+                <div class="logo-icon">OE</div>
+                <div class="logo-text">OMKAR ENTERPRISES</div>
+            </a>
+            
+            <button class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            
+            <ul class="nav-menu">
+                <li><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
+                <li><a href="slabs.html"><i class="fas fa-chart-line"></i> Tiers</a></li>
+                <li><a href="legal-framework.html"><i class="fas fa-gavel"></i> Legal</a></li>
+                <li><a href="testimonials.html"><i class="fas fa-star"></i> Testimonials</a></li>
+                <li><a href="faq.html"><i class="fas fa-question-circle"></i> FAQ</a></li>
+                <li class="nav-cta"><a href="contact.html" class="btn-nav-login"><i class="fas fa-phone-alt"></i> Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="slabs-hero">
+        <div class="container">
+            <h1>Investment <span class="gold-text">Partnership Tiers</span></h1>
+            <p class="section-subtitle">Choose the tier that matches your financial goals. All tiers include full PDC security and notarized agreements.</p>
+        </div>
+    </section>
+
+    <!-- Investment Tiers -->
+    <section class="tiers-section">
+        <div class="container">
+            <div class="tiers-grid-slabs">
+                <!-- Silver Tier -->
+                <div class="tier-card-slabs">
+                    <div class="tier-header-slabs">
+                        <div class="tier-badge-slabs silver">Silver Tier</div>
+                        <h3>Starter Partnership</h3>
+                        <div class="tier-price-range">₹25,000 - ₹1,00,000</div>
+                    </div>
+                    
+                    <div class="tier-body-slabs">
+                        <div class="tier-returns-slabs">
+                            <div class="returns-percent-slabs">2.0%</div>
+                            <div class="returns-label-slabs">Monthly Finance Charge</div>
+                            <div class="returns-bonus">≈ 24% Annual Return</div>
+                        </div>
+                        
+                        <div class="tier-features-slabs">
+                            <h4>Included Features</h4>
+                            <ul>
+                                <li><i class="fas fa-check-circle"></i> Notarized Bilateral Agreement</li>
+                                <li><i class="fas fa-check-circle"></i> Post-Dated Cheque Security</li>
+                                <li><i class="fas fa-check-circle"></i> Monthly NEFT Payouts</li>
+                                <li><i class="fas fa-check-circle"></i> Quarterly Portfolio Review</li>
+                                <li><i class="fas fa-check-circle"></i> Email Support</li>
+                                <li><i class="fas fa-check-circle"></i> 90-Day Withdrawal Notice</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="tier-calculation">
+                            <h4>Sample Investment: ₹50,000</h4>
+                            <div class="calculation-example">
+                                <div class="calc-row">
+                                    <span>Principal Amount:</span>
+                                    <span>₹50,000</span>
+                                </div>
+                                <div class="calc-row">
+                                    <span>Monthly Returns (2%):</span>
+                                    <span>₹1,000/month</span>
+                                </div>
+                                <div class="calc-row bonus">
+                                    <span>Annual Returns:</span>
+                                    <span>₹12,000</span>
+                                </div>
+                                <div class="calc-row calc-result">
+                                    <span>Total in 5 Years:</span>
+                                    <span>₹1,10,000</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="tier-footer-slabs">
+                        <a href="contact.html" class="btn-primary">
+                            <i class="fas fa-file-contract"></i> Start Silver Partnership
+                        </a>
+                        <p class="mt-3"><small>Ideal for first-time investors</small></p>
+                    </div>
+                </div>
+
+                <!-- Gold Tier (Featured) -->
+                <div class="tier-card-slabs featured">
+                    <div class="tier-badge-slabs gold">
+                        Gold Tier
+                        <div class="badge-popular">Most Popular</div>
+                    </div>
+                    
+                    <div class="tier-header-slabs">
+                        <h3>Premium Partnership</h3>
+                        <div class="tier-price-range">₹1,00,000 - ₹5,00,000</div>
+                    </div>
+                    
+                    <div class="tier-body-slabs">
+                        <div class="tier-returns-slabs">
+                            <div class="returns-percent-slabs">2.2%</div>
+                            <div class="returns-label-slabs">Monthly Finance Charge</div>
+                            <div class="returns-bonus">≈ 26.4% Annual Return</div>
+                        </div>
+                        
+                        <div class="tier-features-slabs">
+                            <h4>All Silver Features PLUS:</h4>
+                            <ul>
+                                <li><i class="fas fa-check-circle"></i> Digital Dashboard Access</li>
+                                <li><i class="fas fa-check-circle"></i> Priority Payout Processing</li>
+                                <li><i class="fas fa-check-circle"></i> Direct Founder Consultation</li>
+                                <li><i class="fas fa-check-circle"></i> Monthly Portfolio Reports</li>
+                                <li><i class="fas fa-check-circle"></i> WhatsApp Priority Support</li>
+                                <li><i class="fas fa-check-circle"></i> Performance Bonuses Available</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="tier-calculation">
+                            <h4>Sample Investment: ₹2,50,000</h4>
+                            <div class="calculation-example">
+                                <div class="calc-row">
+                                    <span>Principal Amount:</span>
+                                    <span>₹2,50,000</span>
+                                </div>
+                                <div class="calc-row">
+                                    <span>Monthly Returns (2.2%):</span>
+                                    <span>₹5,500/month</span>
+                                </div>
+                                <div class="calc-row bonus">
+                                    <span>Annual Returns:</span>
+                                    <span>₹66,000</span>
+                                </div>
+                                <div class="calc-row calc-result">
+                                    <span>Total in 5 Years:</span>
+                                    <span>₹5,80,000</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="tier-footer-slabs">
+                        <a href="#lead-form" class="btn-primary">
+                            <i class="fas fa-crown"></i> Apply for Gold Tier
+                        </a>
+                        <p class="mt-3"><small>Recommended for serious investors</small></p>
+                    </div>
+                </div>
+
+                <!-- Platinum Tier -->
+                <div class="tier-card-slabs">
+                    <div class="tier-header-slabs">
+                        <div class="tier-badge-slabs platinum">Platinum Tier</div>
+                        <h3>Elite Partnership</h3>
+                        <div class="tier-price-range">₹5,00,000+</div>
+                    </div>
+                    
+                    <div class="tier-body-slabs">
+                        <div class="tier-returns-slabs">
+                            <div class="returns-percent-slabs">2.5%</div>
+                            <div class="returns-label-slabs">Monthly Finance Charge</div>
+                            <div class="returns-bonus">≈ 30% Annual Return</div>
+                        </div>
+                        
+                        <div class="tier-features-slabs">
+                            <h4>All Gold Features PLUS:</h4>
+                            <ul>
+                                <li><i class="fas fa-check-circle"></i> Custom Agreement Terms</li>
+                                <li><i class="fas fa-check-circle"></i> Same-Day Payout Processing</li>
+                                <li><i class="fas fa-check-circle"></i> Quarterly In-Person Reviews</li>
+                                <li><i class="fas fa-check-circle"></i> Strategic Portfolio Planning</li>
+                                <li><i class="fas fa-check-circle"></i> Personal Relationship Manager</li>
+                                <li><i class="fas fa-check-circle"></i> Business Networking Access</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="tier-calculation">
+                            <h4>Sample Investment: ₹10,00,000</h4>
+                            <div class="calculation-example">
+                                <div class="calc-row">
+                                    <span>Principal Amount:</span>
+                                    <span>₹10,00,000</span>
+                                </div>
+                                <div class="calc-row">
+                                    <span>Monthly Returns (2.5%):</span>
+                                    <span>₹25,000/month</span>
+                                </div>
+                                <div class="calc-row bonus">
+                                    <span>Annual Returns:</span>
+                                    <span>₹3,00,000</span>
+                                </div>
+                                <div class="calc-row calc-result">
+                                    <span>Total in 5 Years:</span>
+                                    <span>₹25,00,000</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="tier-footer-slabs">
+                        <a href="contact.html" class="btn-primary">
+                            <i class="fas fa-gem"></i> Contact for Platinum
+                        </a>
+                        <p class="mt-3"><small>Custom solutions for HNIs</small></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Comparison Section -->
+    <section class="comparison-section">
+        <div class="container">
+            <h2 class="section-title">Tier <span class="gold-text">Comparison</span></h2>
+            <p class="section-subtitle">Detailed feature comparison across all partnership tiers</p>
+            
+            <div class="comparison-table">
+                <table>
+                    <thead>
+                        <tr>
+                            <th class="feature">Features & Benefits</th>
+                            <th>Silver Tier</th>
+                            <th>Gold Tier</th>
+                            <th>Platinum Tier</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="feature">Investment Range</td>
+                            <td>₹25K - ₹1L</td>
+                            <td>₹1L - ₹5L</td>
+                            <td>₹5L+</td>
+                        </tr>
+                        <tr>
+                            <td class="feature">Monthly Returns</td>
+                            <td>2.0%</td>
+                            <td>2.2%</td>
+                            <td>2.5%</td>
+                        </tr>
+                        <tr>
+                            <td class="feature">Annual Equivalent</td>
+                            <td>≈24%</td>
+                            <td>≈26.4%</td>
+                            <td>≈30%</td>
+                        </tr>
+                        <tr>
+                            <td class="feature">Notarized Agreement</td>
+                            <td class="yes">✓ Included</td>
+                            <td class="yes">✓ Included</td>
+                            <td class="yes">✓ Included</td>
+                        </tr>
+                        <tr>
+                            <td class="feature">PDC Security</td>
+                            <td class="yes">✓ Full Security</td>
+                            <td class="yes">✓ Full Security</td>
+                            <td class="yes">✓ Full Security</td>
+                        </tr>
+                        <tr>
+                            <td class="feature">Digital Dashboard</td>
+                            <td class="no">✗ Not Available</td>
+                            <td class="yes">✓ Available</td>
+                            <td class="yes">✓ Available</td>
+                        </tr>
+                        <tr>
+                            <td class="feature">Payout Priority</td>
+                            <td>Standard (5th of Month)</td>
+                            <td>Priority (1st-3rd)</td>
+                            <td>Same Day/Instant</td>
+                        </tr>
+                        <tr>
+                            <td class="feature">Support Level</td>
+                            <td>Email Support</td>
+                            <td>WhatsApp Priority</td>
+                            <td>Personal Manager</td>
+                        </tr>
+                        <tr>
+                            <td class="feature">Review Frequency</td>
+                            <td>Quarterly</td>
+                            <td>Monthly Reports</td>
+                            <td>Quarterly In-Person</td>
+                        </tr>
+                        <tr>
+                            <td class="feature">Performance Bonus</td>
+                            <td class="no">✗ Not Available</td>
+                            <td class="yes">✓ Available</td>
+                            <td class="yes">✓ Available</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+
+    <!-- Process Section -->
+    <section class="process-section">
+        <div class="container">
+            <h2 class="section-title">Simple <span class="gold-text">3-Step</span> Process</h2>
+            
+            <div class="process-steps">
+                <div class="process-step">
+                    <div class="step-number">1</div>
+                    <div class="step-content">
+                        <h3>Choose Your Tier</h3>
+                        <p>Select the investment tier that matches your financial goals and investment capacity.</p>
+                    </div>
+                </div>
+                
+                <div class="process-step">
+                    <div class="step-number">2</div>
+                    <div class="step-content">
+                        <h3>Documentation & PDC</h3>
+                        <p>Complete notarized agreement and receive Post-Dated Cheques for your principal amount.</p>
+                    </div>
+                </div>
+                
+                <div class="process-step">
+                    <div class="step-number">3</div>
+                    <div class="step-content">
+                        <h3>Start Receiving Returns</h3>
+                        <p>Monthly returns credited via NEFT starting next month. Track everything in your dashboard.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="text-center mt-5">
+                <a href="contact.html" class="btn-primary btn-large">
+                    <i class="fas fa-calendar-check"></i> Schedule Consultation
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Lead Form Section -->
+    <section id="lead-form" class="lead-section">
+        <div class="container">
+            <div class="lead-container">
+                <div class="lead-content">
+                    <h2>Ready to <span class="gold-text">Invest?</span></h2>
+                    <p>Submit this form to receive your personalized partnership proposal. Santosh Shendkar will contact you within 24 hours.</p>
+                    
+                    <div class="lead-features">
+                        <div class="feature">
+                            <i class="fas fa-check-circle gold-text"></i>
+                            <span>No Commitment Consultation</span>
+                        </div>
+                        <div class="feature">
+                            <i class="fas fa-check-circle gold-text"></i>
+                            <span>Sample Agreement Provided</span>
+                        </div>
+                        <div class="feature">
+                            <i class="fas fa-check-circle gold-text"></i>
+                            <span>Complete Transparency</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="lead-form-container">
+                    <form id="tierApplicationForm" action="https://formspree.io/f/mdkqpkqp" method="POST">
+                        <h3>Select Your Tier</h3>
+                        
+                        <div class="form-group">
+                            <label for="investmentTier"><i class="fas fa-layer-group"></i> Preferred Tier</label>
+                            <select id="investmentTier" name="investmentTier" required>
+                                <option value="">Select Investment Tier</option>
+                                <option value="silver">Silver Tier (₹25K - ₹1L)</option>
+                                <option value="gold">Gold Tier (₹1L - ₹5L)</option>
+                                <option value="platinum">Platinum Tier (₹5L+)</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="fullName"><i class="fas fa-user"></i> Full Name (as per PAN)</label>
+                            <input type="text" id="fullName" name="fullName" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="whatsapp"><i class="fab fa-whatsapp"></i> WhatsApp Number</label>
+                            <input type="tel" id="whatsapp" name="whatsapp" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="investmentAmount"><i class="fas fa-rupee-sign"></i> Exact Investment Amount</label>
+                            <input type="text" id="investmentAmount" name="investmentAmount" placeholder="e.g., ₹2,50,000" required>
+                        </div>
+                        
+                        <div class="form-group checkbox-group">
+                            <input type="checkbox" id="tierConsent" required>
+                            <label for="tierConsent">
+                                I have read and understood the <a href="legal-framework.html">Legal Framework</a> including the 90-day withdrawal notice period and PDC security terms.
+                            </label>
+                        </div>
+                        
+                        <button type="submit" class="btn-primary">
+                            <i class="fas fa-paper-plane"></i> Submit Application
+                        </button>
+                        
+                        <p class="form-note">
+                            <i class="fas fa-lock"></i> Your information is confidential and secure
+                        </p>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq-preview">
+        <div class="container">
+            <h2 class="section-title">Tier <span class="gold-text">FAQs</span></h2>
+            
+            <div class="faq-items">
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>Can I upgrade my tier later?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Yes, you can upgrade at any time. Additional investment follows the same security protocol with fresh PDCs and supplementary agreement.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>Is there a minimum lock-in period?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>All tiers have an 8-month minimum partnership period. Early withdrawal before 8 months results in recalculated returns at 1.5% monthly rate.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>How are returns calculated for partial months?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Returns are calculated on a pro-rata basis for partial months. Your first returns are paid on the 5th of the following month.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="text-center">
+                <a href="faq.html" class="btn-outline">
+                    <i class="fas fa-question-circle"></i> View All FAQs
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-disclaimer">
+                <h4><i class="fas fa-exclamation-triangle"></i> TIER SELECTION DISCLAIMER</h4>
+                <p>
+                    Tier selection should be based on your investment capacity and financial goals. Past performance 
+                    is not indicative of future results. All investments carry risk. Please read the complete 
+                    <a href="legal-framework.html">Legal Framework</a> before proceeding.
+                </p>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2026 Omkar Enterprises. All Rights Reserved. | Partnership Tiers</p>
+                <p class="footer-regulatory">
+                    <i class="fas fa-chart-line"></i> Returns are projected and not guaranteed
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script>
+        // Tier selection form handler
+        document.getElementById('tierApplicationForm')?.addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Simple validation
+            const tier = document.getElementById('investmentTier').value;
+            const amount = document.getElementById('investmentAmount').value;
+            const name = document.getElementById('fullName').value;
+            const whatsapp = document.getElementById('whatsapp').value;
+            
+            if (!tier || !amount || !name || !whatsapp) {
+                alert('Please fill in all required fields.');
+                return;
+            }
+            
+            // Show success message
+            alert('Application submitted! Santosh Shendkar will contact you on WhatsApp within 24 hours.');
+            
+            // Reset form
+            this.reset();
+        });
+        
+        // Tier card hover effects
+        document.querySelectorAll('.tier-card-slabs').forEach(card => {
+            card.addEventListener('mouseenter', () => {
+                if (!card.classList.contains('featured')) {
+                    card.style.transform = 'translateY(-5px)';
+                }
+            });
+            
+            card.addEventListener('mouseleave', () => {
+                if (!card.classList.contains('featured')) {
+                    card.style.transform = 'translateY(0)';
+                } else {
+                    card.style.transform = 'translateY(-10px)';
+                }
+            });
+        });
+    </script>
+</body>
+</html>
